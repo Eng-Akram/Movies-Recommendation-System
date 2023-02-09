@@ -1,0 +1,261 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetTopBoxData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_MovieName1" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName2" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName3" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName4" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName5" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName6" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName7" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName8" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName9" Type="OutArgument(x:String)" />
+    <x:Property Name="out_MovieName10" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1240,2208</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetTopBoxData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="50">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetTopBoxData" sap:VirtualizedContainerService.HintSize="496,2143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe IMDb'" sap:VirtualizedContainerService.HintSize="434,2032" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0c23ef128ed1bb95420100c4447d54b5" Selector="&lt;html app='msedge.exe' title='IMDb Top Box Office - IMDb' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1885" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'Edge'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3b2a117a-600b-4814-81d2-227a9f8aa65f" InformativeScreenshot="dd43ba02cb346755d272412d1bae2ec6" Selector="&lt;webctrl id='wrapper' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie1'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33aa62a2-8cb5-4802-af5f-61d4a6c1e615" InformativeScreenshot="69f5cd676a556ab0a680f099a520b3df" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName1]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie2'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_2">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="75c49d1e-f6b6-469d-9fe6-9bce44c4786e" InformativeScreenshot="14a4b58d9ddbd1d1585e323055d39bf5" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='A' colName='Title' parentid='boxoffice' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName2]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie3'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_3">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b21acab8-7885-452a-858a-9c797dc584d9" InformativeScreenshot="5ce33c1d64923dbe2a0628e347071293" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName3]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie4'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_4">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65e462e3-7bc0-4a1a-bae0-00b9a5be7c98" InformativeScreenshot="6528f0b4e49817ae0cd2ef32867b3b95" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName4]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie5'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_5">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a6a68a7-5e4e-4942-adc9-d88d1d6dcf25" InformativeScreenshot="dba24dfb1e33db66df2358114dc43294" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='6' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName5]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie6'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_6">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ffd2e232-72b7-451a-b390-68beedcf2de9" InformativeScreenshot="1aa9e9d0e5dd400835dd6a331241b11f" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName6]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie7'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_7">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd44855c-b630-475b-8173-fa536db34780" InformativeScreenshot="0d04c550602ce5bfb7ea5c70914538e6" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='8' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName7]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie8'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_8">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="048e1fc8-2b3a-4111-b2fd-fa364623a25a" InformativeScreenshot="971be327d56f8177538409022b227c56" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='9' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName8]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie9'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_9">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="81a38e1b-d826-4e33-94ad-cae216600e28" InformativeScreenshot="62f974b36b5395f7f55da31598ff1395" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='10' tag='A' parentid='boxoffice' tableCol='2' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName9]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie10'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_10">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c3157ae2-2c5a-4d99-9742-b89ac2326bec" InformativeScreenshot="781b87c995ef59ed086ffb21c1681b6d" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='The Menu' tableRow='11' tag='A' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_MovieName10]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Movie name1 is: &quot; + out_MovieName1 + Environment.NewLine +&#xA;&quot;Movie name2 is: &quot; + out_MovieName2 + Environment.NewLine +&#xA;&quot;Movie name3 is: &quot; + out_MovieName3 + Environment.NewLine +&#xA;&quot;Movie name4 is: &quot; + out_MovieName4 + Environment.NewLine +&#xA;&quot;Movie name5 is: &quot; + out_MovieName5 + Environment.NewLine +&#xA;&quot;Movie name6 is: &quot; + out_MovieName6 + Environment.NewLine +&#xA;&quot;Movie name7 is: &quot; + out_MovieName7 + Environment.NewLine +&#xA;&quot;Movie name8 is: &quot; + out_MovieName8 + Environment.NewLine +&#xA;&quot;Movie name9 is: &quot; + out_MovieName9 + Environment.NewLine +&#xA;&quot;Movie name10 is: &quot; + out_MovieName10]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>

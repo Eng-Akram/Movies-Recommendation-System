@@ -1,0 +1,214 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RottenExtractData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_AnotherRottenSearch" Type="OutArgument(x:String)" />
+    <x:Property Name="out_TomatoMeter" Type="OutArgument(x:String)" />
+    <x:Property Name="out_AudienceScore" Type="OutArgument(x:String)" />
+    <x:Property Name="in_MovieName" Type="InArgument(x:String)" />
+    <x:Property Name="in_MovieInformation" Type="InArgument(x:String)" />
+    <x:Property Name="in_Rating" Type="InArgument(x:String)" />
+    <x:Property Name="in_Popularity" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1240,2497</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RottenExtractData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RottenExtractData" sap:VirtualizedContainerService.HintSize="496,2432" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe Avatar:'" sap:VirtualizedContainerService.HintSize="434,2321" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cc96550c69e0cc9b9f3f1cc1e637b87a" Selector="&lt;html app='msedge.exe' title='Avatar: The Way of Water - Rotten Tomatoes' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,2174" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str_RottenMovieName" />
+              <Variable x:TypeArguments="x:String" Name="str_RottenRating" />
+              <Variable x:TypeArguments="x:String" Name="str_RottenInfo" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="338,25" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'msedge.exe Avatar:'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8be2003c-ac92-42c9-8f41-6ff5025c058b" InformativeScreenshot="42a590ccb2fc14baaa8f251e09888ed0">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Activate.Target>
+            </ui:Activate>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Movie Name'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4127c85c-a138-4866-a30a-c356aa585ae3" InformativeScreenshot="5d5390f851ba92121d5fc949902b20ff" Selector="&lt;webctrl tag='H1' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[str_RottenMovieName]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[str_RottenMovieName]" />
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'rating'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_2">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9825be59-e245-4aa5-9309-99bdd21caa2e" InformativeScreenshot="4807c9106448e63dee9817fa0a5e8329" Selector="&lt;webctrl tag='SCORE-BOARD' /&gt;&lt;webctrl id='rating' shadowhostid='' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[str_RottenRating]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[str_RottenRating]" />
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'movie info'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_3">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b67e7e5-507c-4489-901c-f06957c58f37" InformativeScreenshot="44fb55ec7555cdf8906fd5b7ae2955fd" Selector="&lt;webctrl parentid='topSection' tag='P' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[str_RottenInfo]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[str_RottenInfo]" />
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Tomato Meter'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_4">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7aea66b9-1f1c-4921-8aa0-4020633a1437" InformativeScreenshot="748df77760ab15b339d62d0e4cedd881" Selector="&lt;webctrl tag='SCORE-BOARD' /&gt;&lt;webctrl shadowhostid='' tag='SCORE-ICON-CRITIC' /&gt;&lt;webctrl class='percentage' shadowhostid='' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_TomatoMeter]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[out_TomatoMeter]" />
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'Audience Score'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="GetValue_5">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a19959d7-c429-4122-8817-3b45a6a94f58" InformativeScreenshot="c39348283f64ef02974426ed274d8456" Selector="&lt;webctrl tag='SCORE-BOARD' /&gt;&lt;webctrl shadowhostid='' tag='SCORE-ICON-AUDIENCE' /&gt;&lt;webctrl class='percentage' shadowhostid='' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[out_AudienceScore]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[out_AudienceScore]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Name: &quot; + in_MovieName + Environment.NewLine +&#xD;&#xA;&quot;Year: &quot; + in_MovieInformation.Substring(0, 4) + Environment.NewLine +&#xD;&#xA;&quot;Classification: &quot; + in_MovieInformation.Substring(8,5) + Environment.NewLine +&#xD;&#xA;&quot;Duration: &quot; + in_MovieInformation.Substring(18) + Environment.NewLine +&#xD;&#xA;&quot;&quot; + Environment.NewLine +&#xD;&#xA;&quot;IMDB Rating: &quot; + in_Rating.Split(&quot;/&quot;c)(0) + Environment.NewLine +&#xD;&#xA;&quot;IMDB Popularity: &quot; + in_Popularity + Environment.NewLine +&#xD;&#xA;&quot;&quot; + Environment.NewLine +&#xD;&#xA;&quot;Tomato Meter: &quot; + out_TomatoMeter.Split(&quot;%&quot;c)(0) + Environment.NewLine + &#xD;&#xA;&quot;Audience Score: &quot; + out_AudienceScore.Split(&quot;%&quot;c)(0)]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,196" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="338,85" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Name: &quot; + str_RottenMovieName + Environment.NewLine +&#xA;&quot;Year: &quot; + str_RottenInfo.Substring(0, 4) + Environment.NewLine +&#xA;&quot;Classification: &quot; + str_RottenRating + Environment.NewLine +&#xA;&quot;Duration: &quot; + str_RottenInfo.Substring(24) + Environment.NewLine +&#xA;&quot;Tomato Meter: &quot; + out_TomatoMeter.Split(&quot;%&quot;c)(0) + Environment.NewLine + &#xA;&quot;Audience Score: &quot; + out_AudienceScore.Split(&quot;%&quot;c)(0)]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="338,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Type Y/N here" Title="Are You Want To Search Again?">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[out_AnotherRottenSearch]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>
